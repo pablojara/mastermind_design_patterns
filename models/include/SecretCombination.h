@@ -12,8 +12,7 @@ class SecretCombination: public Combination
         EnumColor *getCombination();
 
     private:
-        EnumColor *combination;        
-
+    
 };
 
 #endif

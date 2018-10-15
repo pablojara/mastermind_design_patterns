@@ -25,7 +25,7 @@ void ProposedCombination::readCombination()
 
 }
 
-void ProposedCombination::calculateResult(SecretCombination secretCombination)
+void ProposedCombination::calculateResult(SecretCombination *secretCombination)
 {
     EnumColor *secretCombinationArray = secretCombination.getCombination();
     for(int i = 0; i < 4; i++)

@@ -1,0 +1,5 @@
+class ContinueController: public OperationController
+{
+
+
+}

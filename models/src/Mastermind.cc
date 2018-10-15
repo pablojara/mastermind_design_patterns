@@ -3,56 +3,21 @@
 
 Mastermind::Mastermind()
 {
-    proposedCombinations = new ProposedCombination[10];
-}
-
-SecretCombination Mastermind::getSecretCombination()
-{
-    return secretCombination;
-}
-
-ProposedCombination *Mastermind::getProposedCombinations()
-{
-    return proposedCombinations;
+    this->logic = new Logic();
 }
 
 void Mastermind::play()
 {
-    int current = 0;
+    OperationController controller;
     do
     {
-        this->proposedCombinations[current].readCombination();
-        this->proposedCombinations[current].calculateResult(secretCombination);
-        this->printBoard(current);
-        current ++;
-    }
-    while(!this->proposedCombinations[current-1].checkWin() && current < 10);
-
-    if(current < 10)
-        std::cout << "You win. Number of attempts: " << current << std::endl;
-    else
-    {
-        std::cout << "You loose.\n";
-        this->secretCombination.printCombination();
-    }
+        controller = logic->getController();
+        if(controller != NULL)
+        {
+            controller.control();
+        }
+    }while(controller != NULL);
 }
-
-void Mastermind::printBoard(int size)
-{
-    std::cout << std::endl;
-    std::cout << std::endl;
-
-    for(int i = 0; i <= size; i++)
-    {
-        this->proposedCombinations[i].printCombination();
-        this->proposedCombinations[i].printResult();
-        std::cout << std::endl;
-    }
-
-    std::cout << std::endl;
-    std::cout << std::endl;
-}
-
 
 int main()
 {

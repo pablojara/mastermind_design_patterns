@@ -3,18 +3,22 @@
 #include "models/include/SecretCombination.h"
 #include "models/include/ProposedCombination.h"
 
-
 class Controller
 {
     public:
 
     private:
-        Game game;
+        Game *game;
     protected:
-        Controller(Game game);
+        Controller();
         Game getGame();
         State getState();
         void setState(State state);
-        SecretCombination getSecretCombination();
-        ProposedCombination *getProposedCombination();
+        
+        void readCombination();
+        void calculateResult();
+        bool checkWinner();
+        void printBoard();
+        void incrementTurn();
+        void printSecretCombination();
 };

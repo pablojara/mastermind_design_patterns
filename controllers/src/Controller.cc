@@ -1,8 +1,8 @@
 #include "controllers/include/Controller.h"
 
-Controller::Controller(Game game)
+Controller::Controller(Game *game)
 {
-
+    this->game = game;
 }
 
 Game Controller::getGame()
@@ -12,20 +12,40 @@ Game Controller::getGame()
 
 State Controller::getState()
 {
-    return this->game.getState();
+    return this->game->getState();
 }
 
 void Controller::setState(State state)
 {
-    this->game.setState(state);
+    this->game->setState(state);
 }
 
-SecretCombination Controller::getSecretCombination()
+void Controller::readCombination()
 {
-    this->game.getSecretCombination();
+    this->game->readCombination();
 }
 
-ProposedCombination *Controller::getProposedCombination()
+void Controller::calculateResult()
 {
-    this->game.getProposedCombination();
+    this->game->calculateResult();
+}
+
+bool Controller::checkWinner()
+{
+    this->game->checkWinner();
+}
+
+void Controller::printBoard()
+{
+    this->game->printBoard();
+}
+
+void Controller::printSecretCombination()
+{
+    this->game->printSecretCombination();
+}
+
+void Controller::incrementTurn()
+{
+    this->game->incrementTurn();
 }
