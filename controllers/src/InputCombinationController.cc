@@ -1,14 +1,18 @@
+#include <iostream>
 #include "controllers/include/InputCombinationController.h"
 
-InputCombinationController::InputCombinationController(Game *game):OperationController()
+InputCombinationController::InputCombinationController(Game *game):OperationController(game)
 {
-    this->game = game;
+
 }
 
 void InputCombinationController::control()
 {
     this->readCombination();
     this->calculateResult();
+    this->printCombination();
+    this->printResult();
+    std::cout << std::endl;
     if(this->checkWinner())
     {
         std::cout << "WIN\n";

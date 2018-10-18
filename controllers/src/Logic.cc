@@ -1,17 +1,18 @@
-#include "include/controllers/Logic.h"
+#include "controllers/include/Logic.h"
+#include <iostream>
 
 
 Logic::Logic()
 {
     game = new Game();
-    inputCombinationController = new inputCombinationController(game);
+    inputCombinationController = new InputCombinationController(game);
     startController = new StartController(game);
-    continueController = new ContinueController(game);
+    //continueController = new ContinueController(game);
 }
 
 
 
-OperationController Game::getController()
+OperationController *Logic::getController()
 {
     switch (game->getState())
     {

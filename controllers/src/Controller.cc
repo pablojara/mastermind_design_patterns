@@ -5,7 +5,7 @@ Controller::Controller(Game *game)
     this->game = game;
 }
 
-Game Controller::getGame()
+Game *Controller::getGame()
 {
     return this->game;
 }
@@ -48,4 +48,19 @@ void Controller::printSecretCombination()
 void Controller::incrementTurn()
 {
     this->game->incrementTurn();
+}
+
+int Controller::getTurn()
+{
+    return this->game->getTurn();
+}
+
+void Controller::printResult()
+{
+    this->game->printResult();
+}
+
+void Controller::printCombination()
+{
+    this->game->printCombination();
 }

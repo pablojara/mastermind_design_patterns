@@ -1,3 +1,7 @@
+#ifndef RESULT_H
+#define RESULT_H
+
+
 class Result
 {
 
@@ -11,3 +15,5 @@ class Result
         int *result;
 
 };
+
+#endif

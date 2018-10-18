@@ -8,13 +8,13 @@ Mastermind::Mastermind()
 
 void Mastermind::play()
 {
-    OperationController controller;
+    OperationController *controller;
     do
     {
         controller = logic->getController();
         if(controller != NULL)
         {
-            controller.control();
+            controller->control();
         }
     }while(controller != NULL);
 }

@@ -1,11 +1,14 @@
-#include "controllers/include/operationController.h"
+#ifndef INPUTCOMBINATIONCONTROLLER_H
+#define INPUTCOMBINATIONCONTROLLER_H
+
+#include "controllers/include/OperationController.h"
 
 class InputCombinationController: public OperationController
 {
     public:
         void control();
-    public:
         InputCombinationController(Game *game);
 
-}
+};
 
+#endif

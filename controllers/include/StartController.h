@@ -1,17 +1,10 @@
-#include "controllers/include/operationController.h"
-#include "controllers/include/InputCombinationController.h"
-
+#include "controllers/include/OperationController.h"
 
 class StartController: public OperationController
 {
-    private:
-        InputCombinationController *inputCombinationController;
-
     public:
         StartController(Game *game);
+    public:
         void control();
-
-
-
 
 };

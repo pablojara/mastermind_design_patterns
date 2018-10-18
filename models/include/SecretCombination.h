@@ -11,8 +11,6 @@ class SecretCombination: public Combination
         void printCombination();
         EnumColor *getCombination();
 
-    private:
-    
 };
 
 #endif
