@@ -4,17 +4,18 @@
 Mastermind::Mastermind()
 {
     this->logic = new Logic();
+    this->view = new MastermindView();
 }
 
 void Mastermind::play()
 {
-    OperationController *controller;
+    Controller *controller;
     do
     {
         controller = logic->getController();
         if(controller != NULL)
         {
-            controller->control();
+            view->interact(controller);
         }
     }while(controller != NULL);
 }

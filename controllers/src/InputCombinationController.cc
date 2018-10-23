@@ -1,7 +1,7 @@
 #include <iostream>
 #include "controllers/include/InputCombinationController.h"
 
-InputCombinationController::InputCombinationController(Game *game):OperationController(game)
+InputCombinationController::InputCombinationController(Game *game):Controller(game)
 {
 
 }

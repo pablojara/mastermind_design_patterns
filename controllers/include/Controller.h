@@ -1,12 +1,17 @@
+#ifndef CONTROLLER_H
+#define CONTROLLER_H
+
 #include "models/include/Game.h"
 #include "models/include/State.h"
 #include "models/include/SecretCombination.h"
 #include "models/include/ProposedCombination.h"
+#include "controllers/include/ControllerVisitor.h"
 
 class Controller
 {
     public:
-
+        virtual void control() = 0;
+        virtual void accept(ControllerVisitor *controllerVisitor) = 0;
     private:
         Game *game;
     protected:
@@ -24,3 +29,5 @@ class Controller
         void printResult();
         void printCombination();
 };
+
+#endif

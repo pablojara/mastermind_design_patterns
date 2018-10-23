@@ -1,6 +1,6 @@
 #include "controllers/include/StartController.h"
 
-StartController::StartController(Game *game):OperationController(game)
+StartController::StartController(Game *game):Controller(game)
 {
 
 }
@@ -8,5 +8,15 @@ StartController::StartController(Game *game):OperationController(game)
 void StartController::control()
 {
     this->printSecretCombination();
+    
+}
+
+void StartController::accept(ControllerVisitor *controllerVisitor)
+{
+    controllerVisitor->visit(this);
+}
+
+void StartController::start()
+{
     this->setState(State::IN_GAME);
 }

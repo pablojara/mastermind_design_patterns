@@ -1,5 +1,6 @@
 #include "controllers/include/Logic.h"
-#include "controllers/include/OperationController.h"
+#include "controllers/include/Controller.h"
+#include "views/include/MastermindView.h"
 
 class Mastermind
 {
@@ -11,6 +12,7 @@ class Mastermind
 
     private:
         Logic *logic;
+        MastermindView *view;
 
 
 };

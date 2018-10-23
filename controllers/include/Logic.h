@@ -2,6 +2,7 @@
 #include "controllers/include/StartController.h"
 #include "controllers/include/ContinueController.h"
 #include "controllers/include/InputCombinationController.h"
+#include "controllers/include/Controller.h"
 #include "models/include/State.h"
 
 
@@ -9,7 +10,7 @@ class Logic
 {
     public:
         Logic();
-        OperationController *getController();
+        Controller *getController();
 
     private:
         Game *game;

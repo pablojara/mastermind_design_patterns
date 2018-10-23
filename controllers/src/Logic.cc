@@ -12,7 +12,7 @@ Logic::Logic()
 
 
 
-OperationController *Logic::getController()
+Controller *Logic::getController()
 {
     switch (game->getState())
     {

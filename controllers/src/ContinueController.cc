@@ -1,6 +1,6 @@
 #include "controllers/include/ContinueController.h"
 
-ContinueController::ContinueController(Game *game):OperationController(game)
+ContinueController::ContinueController(Game *game):Controller(game)
 {
 
 }

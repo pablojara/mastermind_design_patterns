@@ -1,10 +1,16 @@
-#include "controllers/include/OperationController.h"
+#ifndef STARTCONTROLLER_H
+#define STARTCONTROLLER_H
 
-class StartController: public OperationController
+#include "controllers/include/Controller.h"
+#include "controllers/include/ControllerVisitor.h"
+
+class StartController: public Controller
 {
     public:
         StartController(Game *game);
-    public:
         void control();
-
+        void start();
+        void accept(ControllerVisitor *controllerVisitor);
 };
+
+#endif
