@@ -22,5 +22,8 @@ void MastermindView::interact(Controller *controller)
 
 MastermindView::MastermindView()
 {
+    startView = new StartView();
+    inputCombinationView = new InputCombinationView();
+    continueView = new ContinueView();
 
 }

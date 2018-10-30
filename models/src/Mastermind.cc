@@ -15,7 +15,8 @@ void Mastermind::play()
         controller = logic->getController();
         if(controller != NULL)
         {
-            /*view->interact(controller);*/
+            std::cout << "Interact\n";
+            view->interact(controller);
         }
     }while(controller != NULL);
 }
