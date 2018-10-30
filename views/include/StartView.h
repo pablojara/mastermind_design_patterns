@@ -3,5 +3,6 @@
 class StartView
 {
     public:
+        StartView();
         void interact(StartController *startController);
 };

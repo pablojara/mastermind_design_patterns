@@ -15,7 +15,7 @@ void Mastermind::play()
         controller = logic->getController();
         if(controller != NULL)
         {
-            view->interact(controller);
+            /*view->interact(controller);*/
         }
     }while(controller != NULL);
 }

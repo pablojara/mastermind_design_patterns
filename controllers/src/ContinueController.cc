@@ -9,3 +9,8 @@ void ContinueController::control()
 {
 
 }
+
+void ContinueController::accept(ControllerVisitor *controllerVisitor)
+{
+    controllerVisitor->visit(this);
+}

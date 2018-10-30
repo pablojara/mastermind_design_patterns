@@ -8,5 +8,5 @@ StartView::StartView()
 void StartView::interact(StartController *startController)
 {
     startController->start();
-    startController->printSecretCombination();
+    //startController->printSecretCombination();
 }

@@ -7,6 +7,7 @@
 class ContinueController: public Controller
 {
     public:
+        void accept(ControllerVisitor *controllerVisitor);
         void control();
         ContinueController(Game *game);
 

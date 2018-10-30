@@ -29,3 +29,8 @@ void InputCombinationController::control()
     }
 
 }
+
+void InputCombinationController::accept(ControllerVisitor *controllerVisitor)
+{
+    controllerVisitor->visit(this);
+}
