@@ -20,3 +20,8 @@ void StartController::start()
 {
     this->setState(State::IN_GAME);
 }
+
+SecretCombination *StartController::getSecretCombination()
+{
+    return this->game->getSecretCombination();
+}

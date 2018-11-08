@@ -1,8 +1,10 @@
 #include "controllers/include/InputCombinationController.h"
+#include "views/include/ProposedCombinationView.h"
+#include <iostream>
 
-class InputCombinationView
+class GameView
 {
     public:
-        InputCombinationView();
+        GameView();
         void interact(InputCombinationController *inputCombinationController);
 };

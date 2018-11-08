@@ -33,3 +33,8 @@ void Result::printResult()
     }
     std::cout << "]";
 }
+
+int *Result::getResult()
+{
+    return this->result;
+}

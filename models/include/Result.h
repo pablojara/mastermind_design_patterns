@@ -7,7 +7,7 @@ class Result
 
     public:
         Result();
-        int getResult();
+        int *getResult();
         void setHit(int i);
         bool checkWin();
         void printResult();

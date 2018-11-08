@@ -1,6 +1,6 @@
 #include "controllers/include/ControllerVisitor.h"
 #include "views/include/StartView.h"
-#include "views/include/InputCombinationView.h"
+#include "views/include/GameView.h"
 #include "views/include/ContinueView.h"
 
 class MastermindView: public ControllerVisitor
@@ -15,7 +15,7 @@ class MastermindView: public ControllerVisitor
         
     private:
         StartView *startView;
-        InputCombinationView *inputCombinationView;
+        GameView *gameView;
         ContinueView *continueView;
 
 

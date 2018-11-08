@@ -15,9 +15,12 @@ class ProposedCombination: public Combination
         void printCombination();
         void printResult();
         bool checkWin();
+        void setCombination(EnumColor *combination);
+        Result *getResult();
+
 
     private:
-        Result result;
+        Result *result;
 
 
 

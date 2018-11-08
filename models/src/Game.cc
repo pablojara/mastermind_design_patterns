@@ -12,7 +12,6 @@ Game::Game()
         this->proposedCombinations[i] = new ProposedCombination();
     }
     
-
 }
 
 Game::~Game()
@@ -44,7 +43,7 @@ void Game::setProposedCombinations(ProposedCombination **proposedCombinations)
     this->proposedCombinations = proposedCombinations;
 }
 
-ProposedCombination **Game::getProposedCombination()
+ProposedCombination **Game::getProposedCombinations()
 {
     return this->proposedCombinations;
 }
@@ -52,6 +51,11 @@ ProposedCombination **Game::getProposedCombination()
 void Game::readCombination()
 {
     this->proposedCombinations[getTurn()]->readCombination();
+}
+
+void Game::setProposedCombination(EnumColor *combination)
+{
+    this->proposedCombinations[getTurn()]->setCombination(combination);
 }
 
 void Game::calculateResult()

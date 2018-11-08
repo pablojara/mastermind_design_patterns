@@ -3,6 +3,7 @@
 
 #include "controllers/include/Controller.h"
 #include "controllers/include/ControllerVisitor.h"
+#include "models/include/EnumColor.h"
 
 class InputCombinationController: public Controller
 {
@@ -10,7 +11,10 @@ class InputCombinationController: public Controller
         void control();
         InputCombinationController(Game *game);
         void accept(ControllerVisitor *controllerVisitor);
-
+        void setProposedCombination(EnumColor *combination);
+        void incrementTurn();
+        int getTurn();
+        ProposedCombination **getProposedCombinations();
+        void calculateResult();
 };
-
 #endif

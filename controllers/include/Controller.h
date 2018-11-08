@@ -12,13 +12,15 @@ class Controller
     public:
         virtual void control() = 0;
         virtual void accept(ControllerVisitor *controllerVisitor) = 0;
-    private:
-        Game *game;
+        
     protected:
+        Game *game;
         Controller(Game *game);
         Game *getGame();
         State getState();
         void setState(State state);
+
+        
         void readCombination();
         void calculateResult();
         bool checkWinner();

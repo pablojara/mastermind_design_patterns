@@ -9,9 +9,15 @@ InputCombinationController::InputCombinationController(Game *game):Controller(ga
 void InputCombinationController::control()
 {
     this->readCombination();
+
+
     this->calculateResult();
+
+
     this->printCombination();
     this->printResult();
+
+    
     std::cout << std::endl;
     if(this->checkWinner())
     {
@@ -33,4 +39,30 @@ void InputCombinationController::control()
 void InputCombinationController::accept(ControllerVisitor *controllerVisitor)
 {
     controllerVisitor->visit(this);
+}
+
+void InputCombinationController::setProposedCombination(EnumColor *combination)
+{
+    this->game->setProposedCombination(combination);
+}
+
+void InputCombinationController::incrementTurn()
+{
+    this->game->incrementTurn();
+}
+
+int InputCombinationController::getTurn()
+{
+    return this->game->getTurn();
+}
+
+ProposedCombination **InputCombinationController::getProposedCombinations()
+{
+    return this->game->getProposedCombinations();
+
+}
+
+void InputCombinationController::calculateResult()
+{
+    this->game->calculateResult();
 }

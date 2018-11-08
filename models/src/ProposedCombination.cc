@@ -3,7 +3,7 @@
 
 ProposedCombination::ProposedCombination()
 {
-
+    result = new Result();
 }
 
 EnumColor *ProposedCombination::getCombination()
@@ -32,7 +32,7 @@ void ProposedCombination::calculateResult(SecretCombination *secretCombination)
     {
         if(this->combination[i].getValue() == secretCombinationArray[i].getValue())
         {
-            this->result.setHit(i);
+            this->result->setHit(i);
         }
     }
 
@@ -64,10 +64,20 @@ void ProposedCombination::printCombination()
 
 bool ProposedCombination::checkWin()
 {
-    return this->result.checkWin();
+    return this->result->checkWin();
 }
 
 void ProposedCombination::printResult()
 {
-    this->result.printResult();
+    this->result->printResult();
+}
+
+void ProposedCombination::setCombination(EnumColor *combination)
+{
+    this->combination = combination;
+}
+
+Result *ProposedCombination::getResult()
+{
+    return this->result;
 }

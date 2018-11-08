@@ -16,7 +16,7 @@ class EnumColor
 
         const char getValue() const;
         void setValue(const char value);
-        EnumColor();
+        EnumColor(); /* TODO copy maria */
 
     private:
         char value;

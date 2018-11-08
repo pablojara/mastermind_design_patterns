@@ -11,6 +11,8 @@ class StartController: public Controller
         void control();
         void start();
         void accept(ControllerVisitor *controllerVisitor);
+        SecretCombination *getSecretCombination();
+
 };
 
 #endif

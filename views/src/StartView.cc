@@ -9,6 +9,5 @@ StartView::StartView()
 void StartView::interact(StartController *startController)
 {
     startController->start();
-    
-    //startController->printSecretCombination();
+    std::cout << "Welcome to Mastermind(R).\n\nThe secret combination is already set, you can start playing:\n\n";
 }

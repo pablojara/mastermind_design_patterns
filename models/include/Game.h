@@ -17,7 +17,8 @@ class Game
         void setSecretCombination(SecretCombination *secretCombination);      
         SecretCombination *getSecretCombination();
         void setProposedCombinations(ProposedCombination **proposedCombinations);
-        ProposedCombination **getProposedCombination();
+        ProposedCombination **getProposedCombinations();
+        void setProposedCombination(EnumColor *combination);
         void readCombination();
         void calculateResult();
         bool checkWinner();
