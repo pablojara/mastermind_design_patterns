@@ -5,16 +5,17 @@
 #include "controllers/include/ControllerVisitor.h"
 #include "models/include/EnumColor.h"
 
-class InputCombinationController: public Controller
+class GameController: public Controller
 {
     public:
         void control();
-        InputCombinationController(Game *game);
+        GameController(Game *game);
         void accept(ControllerVisitor *controllerVisitor);
         void setProposedCombination(EnumColor *combination);
         void incrementTurn();
         int getTurn();
         ProposedCombination **getProposedCombinations();
         void calculateResult();
+        bool checkWinner();
 };
 #endif

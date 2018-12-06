@@ -19,17 +19,13 @@ class Controller
         Game *getGame();
         State getState();
         void setState(State state);
-
-        
         void readCombination();
         void calculateResult();
         bool checkWinner();
-        void printBoard();
         void incrementTurn();
-        void printSecretCombination();
         int getTurn();
         void printResult();
-        void printCombination();
+
 };
 
 #endif

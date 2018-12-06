@@ -7,7 +7,6 @@ StartController::StartController(Game *game):Controller(game)
 
 void StartController::control()
 {
-    this->printSecretCombination();
     
 }
 

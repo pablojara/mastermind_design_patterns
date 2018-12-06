@@ -5,7 +5,7 @@
 Logic::Logic()
 {
     game = new Game();
-    inputCombinationController = new InputCombinationController(game);
+    gameController = new GameController(game);
     startController = new StartController(game);
     //continueController = new ContinueController(game);
 }
@@ -19,9 +19,9 @@ Controller *Logic::getController()
         case State::INITIAL:
             return startController;
         case State::IN_GAME:
-            return inputCombinationController;
+            return gameController;
         case State::FINAL:
-            std::cout << "FINAL STATE\n";
+            std::cout << "END OF GAME\n";
         case State::EXIT:
         default:
             return NULL;

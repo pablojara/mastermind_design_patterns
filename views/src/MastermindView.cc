@@ -5,9 +5,9 @@ void MastermindView::visit(StartController *startController)
     startView->interact(startController);
 }
 
-void MastermindView::visit(InputCombinationController *inputCombinationController)
+void MastermindView::visit(GameController *gameController)
 {
-    gameView->interact(inputCombinationController);
+    gameView->interact(gameController);
 }
 
 void MastermindView::visit(ContinueController *continueController)

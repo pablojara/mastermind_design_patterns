@@ -22,11 +22,9 @@ class Game
         void readCombination();
         void calculateResult();
         bool checkWinner();
-        void printBoard();
         void incrementTurn();
         void printSecretCombination();
         void printResult();
-        void printCombination();
 
     private:
         State state;

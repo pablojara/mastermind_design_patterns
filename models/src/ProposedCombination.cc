@@ -38,30 +38,6 @@ void ProposedCombination::calculateResult(SecretCombination *secretCombination)
 
 }
 
-void ProposedCombination::printCombination()
-{
-    for(int i = 0; i < 4; i++)
-    {   
-        switch(this->combination[i].getValue()) /* Print colored text in the console using ASCII code */
-        {
-            case 'R':
-                std::cout <<  "\033[1;31mR  \033[0m";
-                break;
-            case 'G':
-                std::cout <<  "\033[1;32mG  \033[0m";
-                break;
-            case 'B':
-                std::cout <<  "\033[1;34mB  \033[0m";
-                break;
-            case 'Y':
-                std::cout <<  "\033[1;33mY  \033[0m";
-                break;
-            default:
-                break;
-        }
-    }
-}
-
 bool ProposedCombination::checkWin()
 {
     return this->result->checkWin();

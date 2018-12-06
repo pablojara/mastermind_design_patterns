@@ -6,8 +6,8 @@ Game::Game()
     this->state = State::INITIAL;
     this->secretCombination = new SecretCombination();
     this->turn = 0;
-    this->proposedCombinations = new ProposedCombination*[10];
-    for(int i = 0; i < 10; i++)
+    this->proposedCombinations = new ProposedCombination*[11];
+    for(int i = 0; i < 11; i++)
     {
         this->proposedCombinations[i] = new ProposedCombination();
     }
@@ -68,19 +68,6 @@ bool Game::checkWinner()
     this->proposedCombinations[getTurn()]->checkWin();
 }
 
-void Game::printBoard()
-{
-    for(int i = 0; i < this->getTurn(); i++)
-    {
-        this->proposedCombinations[getTurn()]->printCombination();
-    }
-}
-
-void Game::printSecretCombination()
-{
-    this->secretCombination->printCombination();
-}
-
 void Game::incrementTurn()
 {
     turn++;
@@ -94,9 +81,4 @@ int Game::getTurn()
 void Game::printResult()
 {
     this->proposedCombinations[this->getTurn()]->printResult();
-}
-
-void Game::printCombination()
-{
-    this->proposedCombinations[this->getTurn()]->printCombination();
 }

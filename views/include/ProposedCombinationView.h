@@ -1,14 +1,15 @@
-#include "controllers/include/InputCombinationController.h"
+#include "controllers/include/GameController.h"
 #include "models/include/ProposedCombination.h"
 #include <iostream>
 
 class ProposedCombinationView
 {
     public:
-        ProposedCombinationView(InputCombinationController *inputCombinationController);
+        ProposedCombinationView(GameController *gameController);
         void printCombinations();
         void readCombination();
         void printResult();
+        void printResult(int turn);
     private:
-        InputCombinationController *inputCombinationController;
+        GameController *gameController;
 };

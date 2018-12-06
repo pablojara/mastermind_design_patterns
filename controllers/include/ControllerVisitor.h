@@ -3,7 +3,7 @@
 
 class StartController;
 
-class InputCombinationController;
+class GameController;
 
 class ContinueController;
 
@@ -12,7 +12,7 @@ class ControllerVisitor
 {
     public:
         virtual void visit(StartController *startController) = 0;
-        virtual void visit(InputCombinationController *inputCombinationController) = 0;
+        virtual void visit(GameController *gameController) = 0;
         virtual void visit(ContinueController *continueController) = 0;
 };
 

@@ -11,7 +11,7 @@ SecretCombination::SecretCombination()
 
 }
 
-void SecretCombination::printCombination()
+/*void SecretCombination::printCombination()
 {
     std::cout << "Secret combination: ";
 
@@ -22,7 +22,7 @@ void SecretCombination::printCombination()
 
     std::cout << std::endl;
 
-}
+}*/
 
 EnumColor *SecretCombination::getCombination()
 {
