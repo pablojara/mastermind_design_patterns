@@ -7,7 +7,6 @@ class GameController;
 
 class ContinueController;
 
-
 class ControllerVisitor
 {
     public:

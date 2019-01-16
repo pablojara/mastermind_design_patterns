@@ -12,6 +12,7 @@ void Mastermind::play()
     Controller *controller;
     do
     {
+
         controller = logic->getController();
         if(controller != NULL)
         {
