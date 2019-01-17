@@ -12,7 +12,6 @@ void GameController::control()
     
     this->calculateResult();
 
-    //this->printCombination();
     this->printResult();
 
     std::cout << "WIN\n";

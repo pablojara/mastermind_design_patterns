@@ -9,11 +9,10 @@ class Command
 {
     public:
         Command(std::string title);
-        std::string getTitle(){return title;};
-        virtual void execute();
+        std::string getTitle();
+        virtual void execute() = 0;
     private:
         std::string title;           
-
 };
 
 #endif

@@ -4,8 +4,9 @@
 class MenuView
 {
     public:
+        MenuView(std::vector<Command*> commandVector);
         void printMenu();
-        int getOption();
+        State getOption();
     private:
         int option;
         std::vector <Command*> commandVector;

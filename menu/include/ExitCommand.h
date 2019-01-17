@@ -2,7 +2,8 @@
 
 class ExitCommand: public Command
 {
-    ExitCommand();
-    void execute();
+    public:
+        ExitCommand();
+        void execute();
 
 };

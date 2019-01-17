@@ -10,9 +10,11 @@ Mastermind::Mastermind()
 void Mastermind::play()
 {
     Controller *controller;
+    Menu *menu = new Menu();
     do
     {
-
+        logic->setState(menu->execute());
+        
         controller = logic->getController();
         if(controller != NULL)
         {

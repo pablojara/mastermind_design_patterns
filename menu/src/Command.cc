@@ -1,11 +1,11 @@
 #include "menu/include/Command.h"
 
-Command::Command(char* title)
+Command::Command(std::string title)
 {
     this->title = title;
 }
 
-char* Command::getTitle()
+std::string Command::getTitle()
 {
     return this->title;
 }

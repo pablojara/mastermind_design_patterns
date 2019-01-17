@@ -11,13 +11,20 @@ Logic::Logic()
 }
 
 
-
 Controller *Logic::getController()
 {
     switch (game->getState())
     {
         case State::INITIAL:
             return startController;
+        case State::UNDO:
+            return undoController;
+        case State::REDO:
+            return redoController;
+        case State::SAVE:
+            return saveController;
+        case State::LOAD:
+            return loadController;
         case State::IN_GAME:
             return gameController;
         case State::FINAL:
@@ -26,4 +33,9 @@ Controller *Logic::getController()
         default:
             return NULL;
     }
+}
+
+void Logic::setState(State state)
+{
+    this->game->setState(state);
 }

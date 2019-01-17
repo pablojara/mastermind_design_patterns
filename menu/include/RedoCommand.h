@@ -2,6 +2,7 @@
 
 class RedoCommand: public Command
 {
-    RedoCommand();
-    void execute();
+    public:
+        RedoCommand();
+        void execute();
 };

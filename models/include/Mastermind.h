@@ -1,6 +1,7 @@
 #include "controllers/include/Logic.h"
 #include "controllers/include/Controller.h"
 #include "views/include/MastermindView.h"
+#include "menu/include/Menu.h"
 
 class Mastermind
 {

@@ -2,6 +2,7 @@
 
 class LoadCommand: public Command
 {
-    LoadCommand();
-    void execute();
+    public:
+        LoadCommand();
+        void execute();
 };

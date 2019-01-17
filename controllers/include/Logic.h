@@ -5,16 +5,17 @@
 #include "controllers/include/Controller.h"
 #include "models/include/State.h"
 
-
 class Logic
 {
     public:
         Logic();
         Controller *getController();
+        void setState(State state);
 
     private:
         Game *game;
         StartController *startController;
         ContinueController *continueController;
         GameController *gameController;
+        
 };

@@ -2,7 +2,8 @@
 
 class UndoCommand: public Command
 {
-    UndoCommand();
-    void execute();
+    public:
+        UndoCommand();
+        void execute();
 
 };

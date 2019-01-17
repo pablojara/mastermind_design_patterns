@@ -2,7 +2,8 @@
 
 class StartCommand: public Command
 {
-    StartCommand();
-    void execute();
+    public:
+        StartCommand();
+        void execute();
 
 };

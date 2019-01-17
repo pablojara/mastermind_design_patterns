@@ -2,6 +2,7 @@
 
 class SaveCommand: public Command
 {
-    SaveCommand();
-    void execute();
+    public:
+        SaveCommand();
+        void execute();
 };
