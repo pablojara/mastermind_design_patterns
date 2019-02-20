@@ -4,9 +4,6 @@ CompositeInitialController::CompositeInitialController(Game *game):Controller(ga
 {
     commandVector.push_back(new StartCommand(game));
     commandVector.push_back(new LoadCommand(game));
-    commandVector.push_back(new SaveCommand(game));
-    commandVector.push_back(new UndoCommand(game));
-    commandVector.push_back(new RedoCommand(game));
     commandVector.push_back(new ExitCommand(game));
 }
 

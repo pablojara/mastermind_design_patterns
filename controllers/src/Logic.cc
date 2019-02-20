@@ -8,6 +8,7 @@ Logic::Logic()
     //gameController = new GameController(game);
     //startController = new StartController(game);
     compositeInitialController = new CompositeInitialController(game);
+    compositeInGameController = new CompositeInGameController(game);
     //compositeInGameController = new CompositeInGameController(game);
     //continueController = new ContinueController(game);
 }
@@ -20,7 +21,7 @@ Controller *Logic::getController()
         case State::INITIAL:
             return compositeInitialController;
         case State::IN_GAME:
-            return NULL;
+            return compositeInGameController;
         case State::FINAL:
             std::cout << "END OF GAME\n";
         case State::EXIT:

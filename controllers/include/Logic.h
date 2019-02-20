@@ -2,6 +2,7 @@
 #include "controllers/include/StartController.h"
 #include "controllers/include/ContinueController.h"
 #include "controllers/include/CompositeInitialController.h"
+#include "controllers/include/CompositeInGameController.h"
 #include "controllers/include/GameController.h"
 #include "controllers/include/Controller.h"
 #include "models/include/State.h"
@@ -19,5 +20,5 @@ class Logic
         ContinueController *continueController;
         GameController *gameController;
         CompositeInitialController *compositeInitialController;
-        
+        CompositeInGameController *compositeInGameController;
 };

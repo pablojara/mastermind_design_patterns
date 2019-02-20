@@ -20,7 +20,7 @@ void InitialMenuView::printMenu(std::vector <Command*> commandVector)
     std::cout << "MENU:\n";
     for(unsigned int i = 0; i < commandVector.size(); i++)
     {
-        std::cout << i+1 << commandVector[i]->getTitle() << std::endl;
+        std::cout << i << commandVector[i]->getTitle() << std::endl;
     }
 }
 

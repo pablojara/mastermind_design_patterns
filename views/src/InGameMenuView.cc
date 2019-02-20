@@ -8,9 +8,12 @@ InGameMenuView::InGameMenuView()
 
 void InGameMenuView::interact(CompositeInGameController *compositeInGameController)
 {
+    
+    compositeInGameController->play();    
+    
     compositeInGameController->setCommands();
 
-    printMenu(compositeInGameController->getCommandVector());
+    this->printMenu(compositeInGameController->getCommandVector());
 
     compositeInGameController->launchCommand(this->getOption());
 }

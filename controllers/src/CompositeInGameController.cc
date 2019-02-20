@@ -2,8 +2,8 @@
 
 CompositeInGameController::CompositeInGameController(Game *game):Controller(game)
 {
-    commandVector.push_back(new StartCommand(game));
-    commandVector.push_back(new LoadCommand(game));
+    gameController = new GameController(game);
+    commandVector.push_back(new NextRoundCommand(game));
     commandVector.push_back(new SaveCommand(game));
     commandVector.push_back(new UndoCommand(game));
     commandVector.push_back(new RedoCommand(game));
@@ -34,4 +34,10 @@ void CompositeInGameController::accept(ControllerVisitor *controllerVisitor)
 void CompositeInGameController::launchCommand(int command)
 {
     this->commandVector[command]->execute();
+}
+
+void CompositeInGameController::play()
+{
+    GameView *gameView = new GameView();
+    gameView->interact(gameController);
 }

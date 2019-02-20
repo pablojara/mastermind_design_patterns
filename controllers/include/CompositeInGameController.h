@@ -7,10 +7,12 @@
 #include "menu/include/SaveCommand.h"
 #include "menu/include/StartCommand.h"
 #include "menu/include/UndoCommand.h"
+#include "menu/include/NextRoundCommand.h"
 #include "menu/include/Command.h"
-#include <vector>
-
+#include "views/include/GameView.h"
+#include "controllers/include/GameController.h"
 #include "controllers/include/Controller.h"
+#include <vector>
 
 class CompositeInGameController: public Controller
 {
@@ -20,9 +22,11 @@ class CompositeInGameController: public Controller
         CompositeInGameController(Game *game);
         void setCommands();
         void launchCommand(int option);
+        void play();
         std::vector <Command*> getCommandVector();
     private:
         std::vector <Command*> commandVector;
+        GameController *gameController;
 };
 
 #endif
