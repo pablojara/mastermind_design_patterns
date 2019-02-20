@@ -1,6 +1,6 @@
 #include "menu/include/LoadCommand.h"
 
-LoadCommand::LoadCommand():Command("Load")
+LoadCommand::LoadCommand(Game *game):Command("Load")
 {
 
 }

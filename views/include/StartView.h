@@ -1,4 +1,9 @@
+#ifndef STARTVIEW_H
+#define STARTVIEW_H
+
+
 #include "controllers/include/StartController.h"
+
 
 class StartView
 {
@@ -6,3 +11,5 @@ class StartView
         StartView();
         void interact(StartController *startController);
 };
+
+#endif

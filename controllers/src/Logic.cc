@@ -5,8 +5,10 @@
 Logic::Logic()
 {
     game = new Game();
-    gameController = new GameController(game);
-    startController = new StartController(game);
+    //gameController = new GameController(game);
+    //startController = new StartController(game);
+    compositeInitialController = new CompositeInitialController(game);
+    //compositeInGameController = new CompositeInGameController(game);
     //continueController = new ContinueController(game);
 }
 
@@ -16,17 +18,9 @@ Controller *Logic::getController()
     switch (game->getState())
     {
         case State::INITIAL:
-            return startController;
-        case State::UNDO:
-            return undoController;
-        case State::REDO:
-            return redoController;
-        case State::SAVE:
-            return saveController;
-        case State::LOAD:
-            return loadController;
+            return compositeInitialController;
         case State::IN_GAME:
-            return gameController;
+            return NULL;
         case State::FINAL:
             std::cout << "END OF GAME\n";
         case State::EXIT:

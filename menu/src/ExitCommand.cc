@@ -1,6 +1,6 @@
 #include "menu/include/ExitCommand.h"
 
-ExitCommand::ExitCommand():Command("Exit")
+ExitCommand::ExitCommand(Game *game):Command("Exit")
 {
 
 }

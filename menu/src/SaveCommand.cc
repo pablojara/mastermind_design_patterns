@@ -1,6 +1,6 @@
 #include "menu/include/SaveCommand.h"
 
-SaveCommand::SaveCommand():Command("Save")
+SaveCommand::SaveCommand(Game *game):Command("Save")
 {
 
 }

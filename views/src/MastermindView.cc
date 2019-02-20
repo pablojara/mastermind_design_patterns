@@ -20,10 +20,33 @@ void MastermindView::interact(Controller *controller)
     controller->accept(this);
 }
 
+void MastermindView::visit(CompositeInitialController *compositeInitialController)
+{
+    initialMenuView->interact(compositeInitialController);
+}
+
+void MastermindView::visit(CompositeInGameController *compositeInGameController)
+{
+    inGameMenuView->interact(compositeInGameController);
+}
+
+
+
+
+
+/*
+void MastermindView::interact(CompositeGameController *controller)
+{
+    controller->accept(this);
+}
+*/
+
+
 MastermindView::MastermindView()
 {
     startView = new StartView();
     gameView = new GameView();
     continueView = new ContinueView();
+    initialMenuView = new InitialMenuView();
 
 }

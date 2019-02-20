@@ -1,6 +1,6 @@
 #include "menu/include/UndoCommand.h"
 
-UndoCommand::UndoCommand():Command("Undo")
+UndoCommand::UndoCommand(Game *game):Command("Undo")
 {
 
 }

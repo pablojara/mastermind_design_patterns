@@ -2,6 +2,7 @@
 #define COMMAND_H
 
 #include "models/include/Game.h"
+#include "controllers/include/Controller.h"
 #include "string.h"
 #include <iostream>
 
@@ -12,7 +13,7 @@ class Command
         std::string getTitle();
         virtual void execute() = 0;
     private:
-        std::string title;           
+        std::string title;  
 };
 
 #endif
