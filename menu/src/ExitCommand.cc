@@ -2,10 +2,11 @@
 
 ExitCommand::ExitCommand(Game *game):Command("Exit")
 {
-
+    this->exitController = new ExitController(game);
 }
 
 void ExitCommand::execute()
 {
-
+    this->exitController->exit();
+    std::cout << "Exit game\n";
 }

@@ -30,6 +30,18 @@ void MastermindView::visit(CompositeInGameController *compositeInGameController)
     inGameMenuView->interact(compositeInGameController);
 }
 
+void MastermindView::visit(ExitController *exitController)
+{
+    //inGameMenuView->interact(exitController);
+}
+
+void MastermindView::visit(UndoController *exitController)
+{
+    //inGameMenuView->interact(exitController);
+}
+
+
+
 
 
 

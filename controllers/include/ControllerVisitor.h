@@ -11,6 +11,10 @@ class CompositeInitialController;
 
 class CompositeInGameController;
 
+class ExitController;
+
+class UndoController;
+
 class ControllerVisitor
 {
     public:
@@ -19,6 +23,8 @@ class ControllerVisitor
         virtual void visit(ContinueController *continueController) = 0;
         virtual void visit(CompositeInitialController *continueController) = 0;
         virtual void visit(CompositeInGameController *compositeInGameController) = 0;
+        virtual void visit(ExitController *exitController) = 0;
+        virtual void visit(UndoController *undoController) = 0;
 };
 
 #endif

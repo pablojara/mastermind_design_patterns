@@ -3,9 +3,11 @@
 CompositeInGameController::CompositeInGameController(Game *game):Controller(game)
 {
     gameController = new GameController(game);
+
     commandVector.push_back(new NextRoundCommand(game));
     commandVector.push_back(new SaveCommand(game));
-    commandVector.push_back(new UndoCommand(game));
+    undoCommand = new UndoCommand(game);
+    commandVector.push_back(undoCommand);
     commandVector.push_back(new RedoCommand(game));
     commandVector.push_back(new ExitCommand(game));
 }
@@ -38,6 +40,7 @@ void CompositeInGameController::launchCommand(int command)
 
 void CompositeInGameController::play()
 {
+    undoCommand->storeMemento();
     GameView *gameView = new GameView();
     gameView->interact(gameController);
 }

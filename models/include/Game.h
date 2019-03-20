@@ -5,6 +5,7 @@
 #include "models/include/State.h"
 #include "models/include/SecretCombination.h"
 #include "models/include/ProposedCombination.h"
+#include "models/include/GameMemento.h"
 
 class Game
 {
@@ -25,6 +26,10 @@ class Game
         void incrementTurn();
         void printSecretCombination();
         void printResult();
+        GameMemento *createMemento();
+        void restoreMemento(GameMemento *gameMemento);
+
+        
 
     private:
         State state;

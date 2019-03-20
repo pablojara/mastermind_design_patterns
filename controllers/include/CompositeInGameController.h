@@ -27,6 +27,7 @@ class CompositeInGameController: public Controller
     private:
         std::vector <Command*> commandVector;
         GameController *gameController;
+        UndoCommand *undoCommand;
 };
 
 #endif

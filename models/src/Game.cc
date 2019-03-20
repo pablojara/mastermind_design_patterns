@@ -82,3 +82,16 @@ void Game::printResult()
 {
     this->proposedCombinations[this->getTurn()]->printResult();
 }
+
+GameMemento* Game::createMemento()
+{
+    return new GameMemento(this->state, this->secretCombination, this->proposedCombinations, this->turn);
+}
+
+void Game::restoreMemento(GameMemento *gameMemento)
+{
+    this->state = gameMemento->getState();
+    this->secretCombination = gameMemento->getSecretCombination();
+    this->proposedCombinations = gameMemento->getProposedCombinations();
+    this->turn = gameMemento->getTurn();
+}

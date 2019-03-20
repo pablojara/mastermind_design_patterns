@@ -9,5 +9,5 @@ StartView::StartView()
 void StartView::interact(StartController *startController)
 {
     startController->start();
-    std::cout << "Welcome to Mastermind(R).\n\nThe secret combination is already set, you can start playing:\n\n";
+    std::cout << "Welcome toPABLO Mastermind(R).\n\nThe secret combination is already set, you can start playing:\n\n";
 }
