@@ -22,12 +22,12 @@ class CompositeInGameController: public Controller
         CompositeInGameController(Game *game);
         void setCommands();
         void launchCommand(int option);
-        void play();
+        void storeMemento();
         std::vector <Command*> getCommandVector();
     private:
         std::vector <Command*> commandVector;
         GameController *gameController;
-        UndoCommand *undoCommand;
+        std::vector <GameMemento*> mementoVector;
 };
 
 #endif

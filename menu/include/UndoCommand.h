@@ -8,12 +8,10 @@
 class UndoCommand: public Command
 {
     public:
-        UndoCommand(Game *game);
+        UndoCommand(Game *game, std::vector <GameMemento*> *mementoVector);
         void execute();
-        void storeMemento();
-
     private:
-        std::vector <GameMemento*> mementoVector;
+        std::vector <GameMemento*> *mementoVector;
         UndoController *undoController;
 
 };

@@ -15,6 +15,8 @@ class ExitController;
 
 class UndoController;
 
+class RedoController;
+
 class ControllerVisitor
 {
     public:
@@ -25,6 +27,7 @@ class ControllerVisitor
         virtual void visit(CompositeInGameController *compositeInGameController) = 0;
         virtual void visit(ExitController *exitController) = 0;
         virtual void visit(UndoController *undoController) = 0;
+        virtual void visit(RedoController *redoController) = 0;
 };
 
 #endif

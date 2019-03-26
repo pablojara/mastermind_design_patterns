@@ -14,5 +14,4 @@ void GameView::interact(GameController *gameController)
     proposedCombinationView->printCombinations();
     gameController->checkWinner();
     gameController->incrementTurn();
-
 }

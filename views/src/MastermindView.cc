@@ -35,10 +35,16 @@ void MastermindView::visit(ExitController *exitController)
     //inGameMenuView->interact(exitController);
 }
 
-void MastermindView::visit(UndoController *exitController)
+void MastermindView::visit(UndoController *undoController)
 {
     //inGameMenuView->interact(exitController);
 }
+
+void MastermindView::visit(RedoController *redoController)
+{
+    //inGameMenuView->interact(exitController);
+}
+
 
 
 

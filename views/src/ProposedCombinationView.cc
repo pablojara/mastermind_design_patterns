@@ -38,6 +38,7 @@ void ProposedCombinationView::printCombinations()
         this->printResult(i);
         std::cout << std::endl;
     }
+    std::cout << std::endl;
 }
 
 void ProposedCombinationView::readCombination()

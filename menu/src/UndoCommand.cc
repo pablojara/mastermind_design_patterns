@@ -1,18 +1,13 @@
 #include "menu/include/UndoCommand.h"
 
-UndoCommand::UndoCommand(Game *game):Command("Undo")
+UndoCommand::UndoCommand(Game *game, std::vector <GameMemento*> *mementoVector):Command("Undo")
 {
     this->undoController = new UndoController(game);
+    this->mementoVector = mementoVector;
 }
 
 void UndoCommand::execute()
 {
-    std::cout << "UndoCommand::RestoreMemento\n";
-    undoController->restoreMemento(this->mementoVector.back());
-}
-
-void UndoCommand::storeMemento()
-{
-    std::cout << "UndoCommand::StoreMemento\n";
-    this->mementoVector.push_back(undoController->createMemento());
+    undoController->restoreMemento(this->mementoVector->at(this->mementoVector->back()->getTurn()-2));
+    std::cout << "Reverting last command.. done.\n";
 }

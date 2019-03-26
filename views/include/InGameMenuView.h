@@ -10,6 +10,8 @@ class InGameMenuView
         void interact(CompositeInGameController *compositeInGameController);
         void printMenu(std::vector <Command*> commandVector);
         int getOption();
+    private: 
+    
 
 };
 

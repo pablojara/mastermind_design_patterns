@@ -20,11 +20,6 @@ void UndoController::undo()
 
 }
 
-GameMemento *UndoController::createMemento()
-{
-    return this->game->createMemento();
-}
-
 void UndoController::restoreMemento(GameMemento *gameMemento)
 {
     this->game->restoreMemento(gameMemento);

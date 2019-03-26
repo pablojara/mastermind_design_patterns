@@ -17,6 +17,7 @@ class MastermindView: public ControllerVisitor
         void visit(CompositeInGameController *compositeInGameController);
         void visit(ExitController *exitController);
         void visit(UndoController *undoController);
+        void visit(RedoController *redoController);
         void interact(Controller *controller);
         
     private:

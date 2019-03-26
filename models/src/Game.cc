@@ -1,5 +1,6 @@
 #include "models/include/Game.h"
 #include "models/include/State.h"
+#include <iostream>
 
 Game::Game()
 {
@@ -85,6 +86,7 @@ void Game::printResult()
 
 GameMemento* Game::createMemento()
 {
+    std::cout << "turn (createMemento):" << this->getTurn() << std::endl;
     return new GameMemento(this->state, this->secretCombination, this->proposedCombinations, this->turn);
 }
 
@@ -94,4 +96,5 @@ void Game::restoreMemento(GameMemento *gameMemento)
     this->secretCombination = gameMemento->getSecretCombination();
     this->proposedCombinations = gameMemento->getProposedCombinations();
     this->turn = gameMemento->getTurn();
+    std::cout << "turn (restoreMemento):" << gameMemento->getTurn() << std::endl;
 }

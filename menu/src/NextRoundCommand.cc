@@ -1,11 +1,12 @@
 #include "menu/include/NextRoundCommand.h"
 
-NextRoundCommand::NextRoundCommand(Game *game):Command("NextRound")
+NextRoundCommand::NextRoundCommand(GameController *gameController):Command("InputCombination")
 {
-    
+    this->gameController = gameController;
 }
 
 void NextRoundCommand::execute()
 {
-    
+    GameView *gameView = new GameView();
+    gameView->interact(gameController);
 }

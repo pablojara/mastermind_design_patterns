@@ -1,16 +1,16 @@
-#ifndef UNDOCONTROLLER_H
-#define UNDOCONTROLLER_H
+#ifndef REDOCONTROLLER_H
+#define REDOCONTROLLER_H
 
 #include "controllers/include/Controller.h"
 #include "controllers/include/ControllerVisitor.h"
 #include "models/include/GameMemento.h"
 
-class UndoController: public Controller
+class RedoController: public Controller
 {
     public:
-        UndoController(Game *game);
+        RedoController(Game *game);
         void control();
-        void undo();
+        void redo();
         void accept(ControllerVisitor *controllerVisitor);
         void restoreMemento(GameMemento *gameMemento);
 };
