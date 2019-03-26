@@ -9,6 +9,7 @@ class LoadCommand: public Command
     public:
         LoadCommand(Game *game);
         void execute();
+        bool isActive();
     private: 
         /*LoadController loadController;*/
 };

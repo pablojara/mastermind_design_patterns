@@ -11,6 +11,7 @@ class Command
     public:
         Command(std::string title);
         std::string getTitle();
+        virtual bool isActive() = 0;
         virtual void execute() = 0;
     private:
         std::string title;  

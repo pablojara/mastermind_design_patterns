@@ -2,11 +2,10 @@
 
 CompositeInGameController::CompositeInGameController(Game *game):Controller(game)
 {
-    gameController = new GameController(game);
     commandVector.push_back(new NextRoundCommand(gameController));
-    commandVector.push_back(new SaveCommand(game));
     commandVector.push_back(new UndoCommand(game, &mementoVector));
     commandVector.push_back(new RedoCommand(game, &mementoVector));
+    commandVector.push_back(new SaveCommand(game));
     commandVector.push_back(new ExitCommand(game));
 }
 
@@ -24,7 +23,6 @@ void CompositeInGameController::control()
 {
     
 }
-
 
 void CompositeInGameController::accept(ControllerVisitor *controllerVisitor)
 {

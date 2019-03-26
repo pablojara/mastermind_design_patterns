@@ -10,3 +10,8 @@ void ExitCommand::execute()
     this->exitController->exit();
     std::cout << "Exit game\n";
 }
+
+bool ExitCommand::isActive()
+{
+    return true;
+}

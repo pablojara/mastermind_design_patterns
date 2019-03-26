@@ -9,3 +9,8 @@ void LoadCommand::execute()
 {
 
 }
+
+bool LoadCommand::isActive()
+{
+    return true;
+}

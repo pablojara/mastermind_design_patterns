@@ -10,6 +10,7 @@ class UndoCommand: public Command
     public:
         UndoCommand(Game *game, std::vector <GameMemento*> *mementoVector);
         void execute();
+        bool isActive();
     private:
         std::vector <GameMemento*> *mementoVector;
         UndoController *undoController;

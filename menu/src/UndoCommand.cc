@@ -11,3 +11,12 @@ void UndoCommand::execute()
     undoController->restoreMemento(this->mementoVector->at(this->mementoVector->back()->getTurn()-2));
     std::cout << "Reverting last command.. done.\n";
 }
+
+bool UndoCommand::isActive()
+{
+    if(mementoVector->size() > 0)
+    {
+        return true;
+    }
+    return false;
+}

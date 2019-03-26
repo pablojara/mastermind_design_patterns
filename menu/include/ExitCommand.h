@@ -9,6 +9,7 @@ class ExitCommand: public Command
     public:
         ExitCommand(Game *game);
         void execute();
+        bool isActive();
     private:
         ExitController *exitController;
 

@@ -9,3 +9,8 @@ void SaveCommand::execute()
 {
 
 }
+
+bool SaveCommand::isActive()
+{
+    return true;
+}

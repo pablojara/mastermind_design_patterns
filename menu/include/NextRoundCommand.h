@@ -10,6 +10,7 @@ class NextRoundCommand: public Command
     public:
         NextRoundCommand(GameController *gameController);
         void execute();
+        bool isActive();
     private:
         GameController *gameController;
 };

@@ -10,6 +10,7 @@ class RedoCommand: public Command
     public:
         RedoCommand(Game *game, std::vector <GameMemento*> *mementoVector);
         void execute();
+        bool isActive();
     private:
         std::vector <GameMemento*> *mementoVector;
         RedoController *redoController;

@@ -11,3 +11,8 @@ void RedoCommand::execute()
     redoController->restoreMemento(this->mementoVector->at(this->mementoVector->back()->getTurn()));
     std::cout << "Reverting last command.. done.\n";
 }
+
+bool RedoCommand::isActive()
+{
+    return true;
+}

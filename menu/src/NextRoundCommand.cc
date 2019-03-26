@@ -10,3 +10,8 @@ void NextRoundCommand::execute()
     GameView *gameView = new GameView();
     gameView->interact(gameController);
 }
+
+bool NextRoundCommand::isActive()
+{
+    return true;
+}

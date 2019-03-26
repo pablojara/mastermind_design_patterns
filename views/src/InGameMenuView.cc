@@ -24,7 +24,10 @@ void InGameMenuView::printMenu(std::vector <Command*> commandVector)
     std::cout << "MENU:\n";
     for(unsigned int i = 0; i < commandVector.size(); i++)
     {
-        std::cout << "   " << i << " " << commandVector[i]->getTitle() << std::endl;
+        if(commandVector[i]->isActive())
+        {
+            std::cout << "   " << i << " " << commandVector[i]->getTitle() << std::endl;
+        }
     }
 }
 
