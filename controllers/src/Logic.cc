@@ -5,12 +5,8 @@
 Logic::Logic()
 {
     game = new Game();
-    //gameController = new GameController(game);
-    //startController = new StartController(game);
     compositeInitialController = new CompositeInitialController(game);
     compositeInGameController = new CompositeInGameController(game);
-    //compositeInGameController = new CompositeInGameController(game);
-    //continueController = new ContinueController(game);
 }
 
 
