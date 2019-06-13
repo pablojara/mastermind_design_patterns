@@ -19,7 +19,7 @@ class CompositeInGameController: public Controller
     public:
         void accept(ControllerVisitor *controllerVisitor);
         void control();
-        CompositeInGameController(Game *game);
+        CompositeInGameController(Game *game, Registry *registry);
         void setCommands();
         void launchCommand(int option);
         void storeMemento();

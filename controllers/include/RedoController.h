@@ -13,6 +13,8 @@ class RedoController: public Controller
         void redo();
         void accept(ControllerVisitor *controllerVisitor);
         void restoreMemento(GameMemento *gameMemento);
+    private:
+        Registry *registry;
 };
 
 #endif

@@ -15,7 +15,7 @@ void InGameMenuView::interact(CompositeInGameController *compositeInGameControll
 
     compositeInGameController->launchCommand(this->getOption());
 
-    compositeInGameController->storeMemento();
+    //compositeInGameController->storeMemento();
 
 }
 

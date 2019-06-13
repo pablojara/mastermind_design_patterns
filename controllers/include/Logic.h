@@ -1,4 +1,5 @@
 #include "models/include/Game.h"
+#include "models/include/Registry.h"
 #include "controllers/include/StartController.h"
 #include "controllers/include/ContinueController.h"
 #include "controllers/include/CompositeInitialController.h"
@@ -16,6 +17,7 @@ class Logic
 
     private:
         Game *game;
+        Registry *registry;
         StartController *startController;
         ContinueController *continueController;
         GameController *gameController;

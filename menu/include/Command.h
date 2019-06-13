@@ -2,6 +2,7 @@
 #define COMMAND_H
 
 #include "models/include/Game.h"
+#include "models/include/Registry.h"
 #include "controllers/include/Controller.h"
 #include "string.h"
 #include <iostream>

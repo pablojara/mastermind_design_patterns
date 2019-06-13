@@ -8,11 +8,13 @@
 class UndoController: public Controller
 {
     public:
-        UndoController(Game *game);
+        UndoController(Game *game,  std::vector <GameMemento*> *mementoVector);
         void control();
         void undo();
         void accept(ControllerVisitor *controllerVisitor);
         void restoreMemento(GameMemento *gameMemento);
+    private:
+        Registry *registry;
 };
 
 #endif

@@ -5,8 +5,9 @@
 Logic::Logic()
 {
     game = new Game();
-    compositeInitialController = new CompositeInitialController(game);
-    compositeInGameController = new CompositeInGameController(game);
+    registry = new Registry(game);
+    compositeInitialController = new CompositeInitialController(game, registry);
+    compositeInGameController = new CompositeInGameController(game, registry);
 }
 
 

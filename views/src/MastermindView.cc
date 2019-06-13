@@ -45,21 +45,6 @@ void MastermindView::visit(RedoController *redoController)
     //inGameMenuView->interact(exitController);
 }
 
-
-
-
-
-
-
-
-/*
-void MastermindView::interact(CompositeGameController *controller)
-{
-    controller->accept(this);
-}
-*/
-
-
 MastermindView::MastermindView()
 {
     startView = new StartView();

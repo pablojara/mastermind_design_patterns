@@ -1,9 +1,9 @@
 #include "menu/include/RedoCommand.h"
 
-RedoCommand::RedoCommand(Game *game, std::vector <GameMemento*> *mementoVector):Command("Redo")
+RedoCommand::RedoCommand(Game *game, Registry *registry):Command("Redo")
 {
-    this->redoController = new RedoController(game);
-    this->mementoVector = mementoVector;
+    this->redoController = new RedoController(game, registry);
+
 }
 
 void RedoCommand::execute()

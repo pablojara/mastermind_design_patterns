@@ -86,7 +86,6 @@ void Game::printResult()
 
 GameMemento* Game::createMemento()
 {
-    std::cout << "turn (createMemento):" << this->getTurn() << std::endl;
     return new GameMemento(this->state, this->secretCombination, this->proposedCombinations, this->turn);
 }
 
