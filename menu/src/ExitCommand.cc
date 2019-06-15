@@ -8,7 +8,6 @@ ExitCommand::ExitCommand(Game *game):Command("Exit")
 void ExitCommand::execute()
 {
     this->exitController->exit();
-    std::cout << "Exit game\n";
 }
 
 bool ExitCommand::isActive()

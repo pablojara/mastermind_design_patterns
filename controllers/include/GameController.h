@@ -9,7 +9,7 @@ class GameController: public Controller
 {
     public:
         void control();
-        GameController(Game *game);
+        GameController(Game *game, Registry *registry);
         void accept(ControllerVisitor *controllerVisitor);
         void setProposedCombination(EnumColor *combination);
         void incrementTurn();
@@ -17,5 +17,8 @@ class GameController: public Controller
         ProposedCombination **getProposedCombinations();
         void calculateResult();
         bool checkWinner();
+        void registryMemento();
+    private:
+        Registry *registry;
 };
 #endif

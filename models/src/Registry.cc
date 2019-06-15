@@ -1,22 +1,21 @@
 #include "models/include/Registry.h"
+#include <iostream>
 
 Registry::Registry(Game *game)
 {
     this->game = game;
     this->mementoList = new std::vector <GameMemento*>();
     this->head = 0;
-    //this->mementoList->insert(this->head, this->game->createMemento());
-    //with push back
 }
 
 void Registry::registry()
 {
     for(int i = 0; i < this->head; i++)
     {
-        this->mementoList->erase(0);
+        this->mementoList->pop_back();
     }
     this->head = 0;
-    this->mementoList->insert(this->head, this->game->createMemento());
+    this->mementoList->push_back(this->game->createMemento());
 }
 
 void Registry::undo() {
@@ -27,7 +26,6 @@ void Registry::undo() {
 void Registry::redo() {
     this->head--;
     game->restoreMemento(this->mementoList->at(this->head));
-
 }
 
 bool Registry::undoable(){
@@ -35,5 +33,12 @@ bool Registry::undoable(){
 }
 
 bool Registry::redoable() {
-    return this->head >= 1:
+    return this->head >= 1;
+}
+
+void Registry::reset()
+{
+    this->mementoList = new std::vector <GameMemento*>();
+    this->mementoList->push_back(this->game->createMemento());
+    this->head = 0;
 }

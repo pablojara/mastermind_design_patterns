@@ -1,14 +1,13 @@
 #include "menu/include/StartCommand.h"
 
-StartCommand::StartCommand(Game *game):Command("Start")
+StartCommand::StartCommand(Game *game, Registry *registry):Command("Start")
 {
-    this->startController = new StartController(game);
+    this->startController = new StartController(game, registry);
 }
 
 void StartCommand::execute()
 {
     startController->start();
-    std::cout << "Welcome to Mastermind(R).\n\nThe secret combination is already set, you can start playing:\n\n";
 }
 
 bool StartCommand::isActive()

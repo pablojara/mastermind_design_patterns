@@ -1,13 +1,13 @@
 #include <iostream>
 #include "controllers/include/GameController.h"
 
-GameController::GameController(Game *game):Controller(game)
+GameController::GameController(Game *game, Registry *registry):Controller(game)
 {
-
+    this->registry = registry;
 }
 
 void GameController::control()
-{
+{/*
     this->readCombination();
     
     this->calculateResult();
@@ -30,7 +30,7 @@ void GameController::control()
     else
     {
         this->incrementTurn();
-    }
+    }*/
 
 }
 
@@ -79,4 +79,9 @@ bool GameController::checkWinner()
         std::cout << "LOOSE\n";
         this->setState(State::FINAL);
     }
+}
+
+void GameController::registryMemento()
+{
+    this->registry->registry();
 }

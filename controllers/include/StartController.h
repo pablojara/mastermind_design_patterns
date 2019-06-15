@@ -7,11 +7,14 @@
 class StartController: public Controller
 {
     public:
-        StartController(Game *game);
+        StartController(Game *game, Registry *registry);
         void control();
         void start();
         void accept(ControllerVisitor *controllerVisitor);
         SecretCombination *getSecretCombination();
+        void reset();
+    private:
+        Registry *registry;
 
 };
 

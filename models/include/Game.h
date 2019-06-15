@@ -25,9 +25,9 @@ class Game
         bool checkWinner();
         void incrementTurn();
         void printSecretCombination();
-        void printResult();
         GameMemento *createMemento();
         void restoreMemento(GameMemento *gameMemento);
+        void reset();
 
         
 

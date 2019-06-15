@@ -8,7 +8,7 @@ RedoCommand::RedoCommand(Game *game, Registry *registry):Command("Redo")
 
 void RedoCommand::execute()
 {
-    redoController->restoreMemento(this->mementoVector->at(this->mementoVector->back()->getTurn()));
+    this->redoController->redo();
     std::cout << "Reverting last command.. done.\n";
 }
 

@@ -2,6 +2,7 @@
 #define CONTROLLER_H
 
 #include "models/include/Game.h"
+#include "models/include/Registry.h"
 #include "models/include/State.h"
 #include "models/include/SecretCombination.h"
 #include "models/include/ProposedCombination.h"

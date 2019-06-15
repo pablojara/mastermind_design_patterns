@@ -2,9 +2,10 @@
 
 CompositeInGameController::CompositeInGameController(Game *game, Registry *registry):Controller(game)
 {
-    gameController = new GameController(game);
-    
-    commandVector.push_back(new NextRoundCommand(gameController));
+    //this->gameController = new GameController(game, registry);
+    this->registry = registry;
+    commandVector.push_back(new StartCommand(game, registry));
+    commandVector.push_back(new InputCombinationCommand(game, registry));
     commandVector.push_back(new UndoCommand(game, registry));
     commandVector.push_back(new RedoCommand(game, registry));
     commandVector.push_back(new SaveCommand(game));
@@ -34,9 +35,4 @@ void CompositeInGameController::accept(ControllerVisitor *controllerVisitor)
 void CompositeInGameController::launchCommand(int command)
 {
     this->commandVector[command]->execute();
-}
-
-void CompositeInGameController::storeMemento()
-{
-    this->mementoVector.push_back(game->createMemento());
 }

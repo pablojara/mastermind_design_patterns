@@ -1,14 +1,14 @@
-#ifndef NEXTROUNDCOMMAND_H
-#define NEXTROUNDCOMMAND_H
+#ifndef INPUTCOMBINATIONCOMMAND_H
+#define INPUTCOMBINATIONCOMMAND_H
 
 
 #include "menu/include/Command.h"
 #include "views/include/GameView.h"
 
-class NextRoundCommand: public Command
+class InputCombinationCommand: public Command
 {
     public:
-        NextRoundCommand(GameController *gameController);
+        InputCombinationCommand(Game *game, Registry *registry);
         void execute();
         bool isActive();
     private:

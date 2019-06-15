@@ -13,6 +13,7 @@ class Registry {
         void redo();
         bool undoable();
         bool redoable();
+        void reset();
 
     private:
         std::vector <GameMemento*> *mementoList;

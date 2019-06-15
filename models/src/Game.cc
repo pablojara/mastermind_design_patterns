@@ -79,11 +79,6 @@ int Game::getTurn()
     return turn;
 }
 
-void Game::printResult()
-{
-    this->proposedCombinations[this->getTurn()]->printResult();
-}
-
 GameMemento* Game::createMemento()
 {
     return new GameMemento(this->state, this->secretCombination, this->proposedCombinations, this->turn);
@@ -95,5 +90,16 @@ void Game::restoreMemento(GameMemento *gameMemento)
     this->secretCombination = gameMemento->getSecretCombination();
     this->proposedCombinations = gameMemento->getProposedCombinations();
     this->turn = gameMemento->getTurn();
-    std::cout << "turn (restoreMemento):" << gameMemento->getTurn() << std::endl;
+}
+
+void Game::reset()
+{
+    this->state = State::INITIAL;
+    this->secretCombination = new SecretCombination();
+    this->turn = 0;
+    this->proposedCombinations = new ProposedCombination*[11];
+    for(int i = 0; i < 11; i++)
+    {
+        this->proposedCombinations[i] = new ProposedCombination();
+    }
 }

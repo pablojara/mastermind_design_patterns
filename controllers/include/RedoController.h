@@ -8,7 +8,7 @@
 class RedoController: public Controller
 {
     public:
-        RedoController(Game *game);
+        RedoController(Game *game, Registry *registry);
         void control();
         void redo();
         void accept(ControllerVisitor *controllerVisitor);

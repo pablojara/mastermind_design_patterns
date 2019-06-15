@@ -7,7 +7,7 @@
 #include "menu/include/SaveCommand.h"
 #include "menu/include/StartCommand.h"
 #include "menu/include/UndoCommand.h"
-#include "menu/include/NextRoundCommand.h"
+#include "menu/include/InputCombinationCommand.h"
 #include "menu/include/Command.h"
 #include "views/include/GameView.h"
 #include "controllers/include/GameController.h"
@@ -17,17 +17,15 @@
 class CompositeInGameController: public Controller
 {
     public:
+        CompositeInGameController(Game *game, Registry *registry);
         void accept(ControllerVisitor *controllerVisitor);
         void control();
-        CompositeInGameController(Game *game, Registry *registry);
         void setCommands();
         void launchCommand(int option);
-        void storeMemento();
         std::vector <Command*> getCommandVector();
     private:
         std::vector <Command*> commandVector;
-        GameController *gameController;
-        std::vector <GameMemento*> mementoVector;
+        Registry *registry;
 };
 
 #endif

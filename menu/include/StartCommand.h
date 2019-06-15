@@ -9,7 +9,7 @@
 class StartCommand: public Command
 {
     public:
-        StartCommand(Game *game);
+        StartCommand(Game *game, Registry *registry);
         void execute();
         bool isActive();
     private:

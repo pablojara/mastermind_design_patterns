@@ -1,4 +1,5 @@
 #include "controllers/include/Controller.h"
+#include <iostream>
 
 Controller::Controller(Game *game)
 {
@@ -43,9 +44,4 @@ void Controller::incrementTurn()
 int Controller::getTurn()
 {
     return this->game->getTurn();
-}
-
-void Controller::printResult()
-{
-    this->game->printResult();
 }
