@@ -4,7 +4,6 @@
 
 #include "menu/include/Command.h"
 #include "controllers/include/StartController.h"
-#include "views/include/StartView.h"
 
 class StartCommand: public Command
 {

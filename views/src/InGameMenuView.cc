@@ -8,15 +8,11 @@ InGameMenuView::InGameMenuView()
 
 void InGameMenuView::interact(CompositeInGameController *compositeInGameController)
 { 
-
     compositeInGameController->setCommands();
 
     this->printMenu(compositeInGameController->getCommandVector());
 
     compositeInGameController->launchCommand(this->getOption());
-
-    //compositeInGameController->storeMemento();
-
 }
 
 void InGameMenuView::printMenu(std::vector <Command*> commandVector)

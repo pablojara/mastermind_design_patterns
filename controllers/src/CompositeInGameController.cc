@@ -2,13 +2,13 @@
 
 CompositeInGameController::CompositeInGameController(Game *game, Registry *registry):Controller(game)
 {
-    //this->gameController = new GameController(game, registry);
     this->registry = registry;
     commandVector.push_back(new StartCommand(game, registry));
     commandVector.push_back(new InputCombinationCommand(game, registry));
     commandVector.push_back(new UndoCommand(game, registry));
     commandVector.push_back(new RedoCommand(game, registry));
     commandVector.push_back(new SaveCommand(game));
+    commandVector.push_back(new ContinueCommand(game));
     commandVector.push_back(new ExitCommand(game));
 }
 

@@ -12,7 +12,6 @@ class ProposedCombination: public Combination
         EnumColor  *getCombination();
         void readCombination();
         void calculateResult(SecretCombination *secretCombination);
-        //void printCombination();
         void printResult();
         bool checkWin();
         void setCombination(EnumColor *combination);

@@ -3,6 +3,7 @@
 
 
 #include "menu/include/Command.h"
+#include "controllers/include/GameController.h"
 #include "views/include/GameView.h"
 
 class InputCombinationCommand: public Command

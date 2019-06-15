@@ -12,8 +12,6 @@ void Mastermind::play()
     Controller *controller;
     do
     {
-        //logic->setState(menu->execute());
-        
         controller = logic->getController();
         if(controller != NULL)
         {

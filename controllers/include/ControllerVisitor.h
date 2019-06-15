@@ -17,6 +17,8 @@ class UndoController;
 
 class RedoController;
 
+class StoreController;
+
 class ControllerVisitor
 {
     public:
@@ -28,6 +30,7 @@ class ControllerVisitor
         virtual void visit(ExitController *exitController) = 0;
         virtual void visit(UndoController *undoController) = 0;
         virtual void visit(RedoController *redoController) = 0;
+        virtual void visit(StoreController *continueController) = 0;
 };
 
 #endif

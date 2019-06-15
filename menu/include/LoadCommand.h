@@ -3,6 +3,7 @@
 
 
 #include "menu/include/Command.h"
+#include "controllers/include/StoreController.h"
 
 class LoadCommand: public Command
 {
@@ -11,7 +12,7 @@ class LoadCommand: public Command
         void execute();
         bool isActive();
     private: 
-        /*LoadController loadController;*/
+        StoreController *storeController;
 };
 
 #endif

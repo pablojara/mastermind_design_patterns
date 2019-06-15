@@ -20,7 +20,7 @@ Controller *Logic::getController()
         case State::IN_GAME:
             return compositeInGameController;
         case State::FINAL:
-            std::cout << "END OF GAME\n";
+            return compositeInGameController;
         case State::EXIT:
         default:
             return NULL;

@@ -2,15 +2,15 @@
 
 LoadCommand::LoadCommand(Game *game):Command("Load")
 {
-
+    this->storeController = new StoreController(game);
 }
 
 void LoadCommand::execute()
 {
-
+    this->storeController->load();
 }
 
 bool LoadCommand::isActive()
 {
-    return true;
+    return this->storeController->isLoadable();
 }

@@ -7,9 +7,9 @@
 #include "menu/include/SaveCommand.h"
 #include "menu/include/StartCommand.h"
 #include "menu/include/UndoCommand.h"
+#include "menu/include/ContinueCommand.h"
 #include "menu/include/InputCombinationCommand.h"
 #include "menu/include/Command.h"
-#include "views/include/GameView.h"
 #include "controllers/include/GameController.h"
 #include "controllers/include/Controller.h"
 #include <vector>

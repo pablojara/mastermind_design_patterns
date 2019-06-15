@@ -8,7 +8,6 @@ class SecretCombination: public Combination
 
     public:
         SecretCombination();
-        //void printCombination();
         EnumColor *getCombination();
 
 };

@@ -5,8 +5,7 @@
 
 class Combination
 {
-    public:
-        //virtual void printCombination() = 0;
+ 
     protected:
         EnumColor *combination;
 
